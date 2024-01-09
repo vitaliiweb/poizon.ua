@@ -423,6 +423,7 @@ h6,
     height: 100%;
     margin: 0 auto;
     list-style-type: none;
+    overflow: auto;
 }
 
 .nav-dropdown__list {
