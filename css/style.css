@@ -33,7 +33,7 @@ font-family: 'Roboto Condensed', sans-serif;*/
     --color-white-dark: #f5f5f9;
 
     --font-family-default: 'Roboto', sans-serif;
-    --font-family-default: 'Roboto', sans-serif;
+    --font-family-u-default: 'Roboto Condensed', sans-serif;
 
     --header-height: 72px;
 }
@@ -1305,11 +1305,12 @@ h6,
     height: 100%;
 }
 
-.goods-section__list--sellers .brand-card__title {
+.brand-card__title {
     margin: 8px 0 16px !important;
 }
 
 .brand-card__title-price {
+    font-family: var(--font-family-u-default);
     font-size: var(--fs-7);
     line-height: 1.5;
     letter-spacing: -1px;
@@ -1399,8 +1400,6 @@ h6,
 .goods-section__container {}
 
 .goods-section__u-container {}
-
-.goods-section__list {}
 
 .goods-filter-list {
     display: flex;
