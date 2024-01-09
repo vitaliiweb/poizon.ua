@@ -2,10 +2,18 @@ $(document).ready(function() {
     $('.js-toggle-init').click(function(events) {
         $('body').toggleClass('lock is-show');
     });
+});
+
+
+$(document).ready(function() {
     $('.nav__btn').click(function(event) {
         $('body').toggleClass('is-show');
         event.preventDefault();
     });
+
+});
+
+$(document).ready(function() {
     $(window).scroll(function() {
         if ($(this).scrollTop() > 40) {
             $('.header-mob__wrap-bottom').addClass('hidden-scroll');
@@ -13,36 +21,52 @@ $(document).ready(function() {
             $('.header-mob__wrap-bottom').removeClass('hidden-scroll');
         }
     });
-    $('.js-main-slider-init').slick({
-        autoplay: true,
-        dots: true,
-        infinite: true,
-        speed: 400,
-        slidesToShow: 1,
-        responsive: [
-          {
-            breakpoint: 992,
-            settings: {
-              slidesToShow: 1,
-            }
-          },
-          {
-            breakpoint: 576,
-            settings: {
-              slidesToShow: 1,
-            }
-          }
-        ]
-    });
+});
+
+
+$(document).ready(function() {
+  $('.js-main-slider-init').slick({
+    autoplay: true,
+    dots: true,
+    infinite: true,
+    speed: 400,
+    slidesToShow: 1,
+    responsive: [
+      {
+        breakpoint: 992,
+        settings: {
+          slidesToShow: 1,
+        }
+      },
+      {
+        breakpoint: 576,
+        settings: {
+          slidesToShow: 1,
+        }
+      }
+    ]
+  });
+});
+
+$(document).ready(function() {
     $('.js-footer-title').on('click', function() {
         $(this).closest('.footer-nav-list').toggleClass('active');
     });
+});
+
+$(document).ready(function() {
     $('.footer-el-wrap__item--title').on('click', function() {
         $(this).closest('.footer-el-wrap__list').toggleClass('active');
     });
+});
+
+$(document).ready(function() {
     $('.dropdown-list__title').on('click', function() {
         $(this).closest('.dropdown-list').toggleClass('active');
     });
+});
+
+$(document).ready(function() {
     $('.js-nav-link-init').on('click', function() {
         $(this).closest('.nav__item--title').toggleClass('active');
     });
