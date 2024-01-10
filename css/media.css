@@ -476,6 +476,9 @@
   .footer__payment-list {
     max-width: 100%;
   }
+  .filter-section__description {
+    max-width: 100%;
+  }
 }
 
 @media (max-width: 767px){

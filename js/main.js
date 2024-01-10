@@ -140,3 +140,33 @@ document.addEventListener('DOMContentLoaded', function () {
     document.querySelector('.js-search-form-init').addEventListener('click', handleSearchFormClick);
     document.querySelector('.js-search-btn-close-init').addEventListener('click', handleSearchBtnCloseClick);
 });
+
+$(document).ready(function () {
+    $(".from-filter-list").each(function () {
+        var items = $(this).find(".from-filter-list__item");
+        if (items.length > 10) {
+            items.slice(10).addClass("hidden");
+            $(this).next(".js-show-more").removeClass("hidden");
+        }
+    });
+
+    $(".js-show-more").click(function () {
+        var filterList = $(this).prev(".from-filter-list");
+        filterList.find(".from-filter-list__item.hidden").removeClass("hidden");
+        $(this).addClass("hidden");
+    });
+});
+
+$(document).ready(function () {
+    $(".js-filter-control-title").on("click", function () {
+        var fromFilter = $(this).closest(".filter-control__item").find(".from-filter");
+        fromFilter.toggleClass("hidden");
+        
+        $(this).toggleClass("active", !fromFilter.hasClass("hidden"));
+    });
+});
+
+
+$(document).ready(function () {
+    $('#category').select2();
+});
