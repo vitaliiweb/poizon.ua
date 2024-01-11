@@ -1921,6 +1921,7 @@ h6,
     width: 12px;
     height: 12px;
     fill: var(--color-black);
+    transform: rotate(180deg);
 }
 
 .filter-control__dropdown {}
