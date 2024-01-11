@@ -1925,8 +1925,8 @@ h6,
 
 .filter-control__dropdown {}
 
-.filter-control__item-title:not(.active) .filter-control__item-icon {
-    transform: rotate(-180deg);
+.filter-control__item-title:not(.active) ~ .filter-control__item-icon {
+    transform: rotate(180deg);
 }
 
 .filter-control__from {
