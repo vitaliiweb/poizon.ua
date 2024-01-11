@@ -1265,6 +1265,12 @@ h6,
     padding: 0 12px 0 0;
     position: relative;
     text-transform: uppercase;
+    transition: all .4s;
+}
+
+.breadcrumb-list__link:hover {
+    text-decoration: none;
+    opacity: .7;
 }
 
 .breadcrumb-list__link:after {
@@ -1414,6 +1420,45 @@ h6,
     z-index: 10000 !important;
     border-radius: 4px !important;
 
+}
+
+.filter-control__item {}
+
+.filter-control__title {}
+
+.price-range-container {
+    position: relative;
+    width: 100%;
+    padding: 20px 0;
+}
+
+.price-range {
+    width: 100%;
+    height: 1px;
+    background-color: black;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.slider {
+    width: 14px;
+    height: 14px;
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    border: 1px solid black;
+}
+
+#min-slider {
+    left: 0;
+}
+
+#max-slider {
+    right: 0;
 }
 
 /* header
@@ -1849,36 +1894,39 @@ h6,
 .filter-control__item {
 }
 
-.filter-control__title {
+.filter-control__item:not(:last-child) {
+    margin-bottom: 40px;
+}
+
+.filter-control__item-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 16px;
+}
+
+.js-filter-control-title {}
+
+.filter-control__item-title {
     font-size: var(--fs-7);
     font-weight: 700;
     font-family: var(--font-family-u-default);
-    margin-bottom: 16px;
     cursor: pointer;
     position: relative;
     width: 100%;
-    padding-right: 14px;
 }
 
-.filter-control__title:not(.active):after {
-    transform: rotate(-180deg);
-}
-
-.filter-control__title:after {
-    content: '';
-    position: absolute;
-    top: 50%;
-    right: 0;
+.filter-control__item-icon {
+    display: block;
     width: 12px;
     height: 12px;
-    margin-top: -6px;
-    transition: all .4s;
-    background-image: url(../images/arrow-dark.svg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    pointer-events: none;
-    z-index: 2;
+    fill: var(--color-black);
+}
+
+.filter-control__dropdown {}
+
+.filter-control__item-title:not(.active) .filter-control__item-icon {
+    transform: rotate(-180deg);
 }
 
 .filter-control__from {
